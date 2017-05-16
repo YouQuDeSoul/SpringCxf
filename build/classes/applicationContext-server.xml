@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:jaxws="http://cxf.apache.org/jaxws"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                       http://www.springframework.org/schema/beans/spring-beans.xsd
+                       http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+    <!-- 
+        ***注意*** 
+        手动添加的内容：
+        xmlns:jaxws="http://cxf.apache.org/jaxws"
+        http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd"
+     -->
+
+
+    <jaxws:endpoint id="loginfoService" implementor="#pubService" address="/detail" />
+        <bean id="pubService" class="bing.server.HelloServiceImpl" scope="prototype"></bean>
+</beans>
